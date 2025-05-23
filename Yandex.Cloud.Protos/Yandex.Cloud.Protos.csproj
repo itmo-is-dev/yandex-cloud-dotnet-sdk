@@ -4,39 +4,39 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace>Yandex.Cloud</RootNamespace>
 
-        <PackageId>Yandex.Cloud.Protos</PackageId>
-        <Title>Yandex.Cloud Protocol Buffer Library</Title>
+        <PackageId>Itmo.Dev.Yandex.Cloud.Protos</PackageId>
+        <Title>Yandex.Cloud Protocol Buffer Library (customized by itmo-is-dev)</Title>
         <Summary>Auto-generated library from Protocol Buffer descriptors.</Summary>
         <Description>See project site for more info.</Description>
-        <PackageVersion>1.4.1</PackageVersion>
-        <Authors>Yandex.Cloud</Authors>
+        <PackageVersion>1.4.1.$(PatchVersion)</PackageVersion>
+        <Authors>Yandex.Cloud; itmo-is-dev</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/yandex-cloud/dotnet-sdk/</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/itmo-is-dev/yandex-cloud-dotnet-sdk</PackageProjectUrl>
         <PackageReleaseNotes>Yandex Cloud SDK</PackageReleaseNotes>
-        <Copyright>Copyright 2024, YANDEX LLC.</Copyright>
-        <PackageTags>yandex-cloud sdk proto proto3 protobuf grpc</PackageTags>
+        <Copyright>Copyright 2025, YANDEX LLC.</Copyright>
+        <PackageTags>yandex-cloud sdk proto proto3 protobuf grpc itmo-is-dev</PackageTags>
         <LangVersion>default</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Google.Protobuf" Version="3.26.0" />
-        <PackageReference Include="Grpc.Net.Client" Version="2.61.0" />
+        <PackageReference Include="Google.Protobuf" Version="3.26.0"/>
+        <PackageReference Include="Grpc.Net.Client" Version="2.61.0"/>
         <PackageReference Include="Grpc.Tools" Version="2.62.0">
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-          <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
         </PackageReference>
     </ItemGroup>
     <ItemGroup>
-        <Protobuf Include="../cloudapi/third_party/googleapis/google/**/*.proto" ProtoRoot="../cloudapi/third_party/googleapis" />
-        <Protobuf Include="../cloudapi/yandex/**/*.proto" ProtoRoot="../cloudapi" AdditionalImportDirs="../cloudapi/third_party/googleapis" GrpcServices="Client" />
+        <Protobuf Include="../cloudapi/third_party/googleapis/google/**/*.proto" ProtoRoot="../cloudapi/third_party/googleapis"/>
+        <Protobuf Include="../cloudapi/yandex/**/*.proto" ProtoRoot="../cloudapi" AdditionalImportDirs="../cloudapi/third_party/googleapis" GrpcServices="Client"/>
     </ItemGroup>
-
 
     <Target Name="Replace1" AfterTargets="Protobuf_AfterCompile">
         <PropertyGroup>
             <InputFile>$(IntermediateOutputPath)/yandex/cloud/datatransfer/v1/endpoint/Kafka.cs</InputFile>
             <OutputFile>$(IntermediateOutputPath)/yandex/cloud/datatransfer/v1/endpoint/Kafka.cs</OutputFile>
         </PropertyGroup>
+        <Message Importance="high" Text="Running Replace1"/>
         <WriteLinesToFile
                 File="$(OutputFile)"
                 Lines="$([System.IO.File]::ReadAllText($(InputFile)).
@@ -55,6 +55,7 @@
             <InputFile>$(IntermediateOutputPath)/yandex/cloud/datatransfer/v1/endpoint/Parsers.cs</InputFile>
             <OutputFile>$(IntermediateOutputPath)/yandex/cloud/datatransfer/v1/endpoint/Parsers.cs</OutputFile>
         </PropertyGroup>
+        <Message Importance="high" Text="Running Replace2"/>
         <WriteLinesToFile
                 File="$(OutputFile)"
                 Lines="$([System.IO.File]::ReadAllText($(InputFile)).
@@ -68,6 +69,7 @@
             <InputFile>$(IntermediateOutputPath)/yandex/cloud/datatransfer/v1/endpoint/Yds.cs</InputFile>
             <OutputFile>$(IntermediateOutputPath)/yandex/cloud/datatransfer/v1/endpoint/Yds.cs</OutputFile>
         </PropertyGroup>
+        <Message Importance="high" Text="Running Replace3"/>
         <WriteLinesToFile
                 File="$(OutputFile)"
                 Lines="$([System.IO.File]::ReadAllText($(InputFile)).
@@ -78,6 +80,33 @@
                 Replace('Parser = new global::Yandex.Cloud.Datatransfer.V1.EndPoint.Parser();', 'Parser_ = new global::Yandex.Cloud.Datatransfer.V1.EndPoint.Parser();').
                 Replace('Parser.MergeFrom(other.Parser);', 'Parser_.MergeFrom(other.Parser_);').
                 Replace('input.ReadMessage(Parser);', 'input.ReadMessage(Parser_);'))"
+                Overwrite="true"
+                Encoding="Unicode"/>
+    </Target>
+    <Target Name="Replace4" AfterTargets="Protobuf_AfterCompile">
+        <PropertyGroup>
+            <InputFile>$(IntermediateOutputPath)/yandex/cloud/mdb/opensearch/v1/extension/ExtensionType.cs</InputFile>
+            <OutputFile>$(IntermediateOutputPath)/yandex/cloud/mdb/opensearch/v1/extension/ExtensionType.cs</OutputFile>
+        </PropertyGroup>
+        <Message Importance="high" Text="Running Replace4"/>
+        <WriteLinesToFile
+                File="$(OutputFile)"
+                Lines="$([System.IO.File]::ReadAllText($(InputFile)).
+                Replace('namespace Yandex.Cloud.Mdb.Opensearch.V1.Extension {', 'namespace Yandex.Cloud.Mdb.Opensearch.V1.ExtensionTypes {').
+                Replace('global::Yandex.Cloud.Mdb.Opensearch.V1.Extension.ExtensionType', 'global::Yandex.Cloud.Mdb.Opensearch.V1.ExtensionTypes.ExtensionType'))"
+                Overwrite="true"
+                Encoding="Unicode"/>
+    </Target>
+    <Target Name="Replace5" AfterTargets="Protobuf_AfterCompile">
+        <PropertyGroup>
+            <InputFile>$(IntermediateOutputPath)/yandex/cloud/mdb/opensearch/v1/Extension.cs</InputFile>
+            <OutputFile>$(IntermediateOutputPath)/yandex/cloud/mdb/opensearch/v1/Extension.cs</OutputFile>
+        </PropertyGroup>
+        <Message Importance="high" Text="Running Replace5"/>
+        <WriteLinesToFile
+                File="$(OutputFile)"
+                Lines="$([System.IO.File]::ReadAllText($(InputFile)).
+                Replace('global::Yandex.Cloud.Mdb.Opensearch.V1.Extension.ExtensionType', 'global::Yandex.Cloud.Mdb.Opensearch.V1.ExtensionTypes.ExtensionType'))"
                 Overwrite="true"
                 Encoding="Unicode"/>
     </Target>

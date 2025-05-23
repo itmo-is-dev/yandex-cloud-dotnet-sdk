@@ -1,0 +1,47 @@
+name: "publish packages"
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - '.github/workflows/publish.yml'
+      - '*.props'
+      - 'Yandex.Cloud.Protos/**'
+      - 'Yandex.Cloud.SDK/**'
+      - 'tools/**'
+      - 'cloudapi/**'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    environment: nuget.org
+    
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 9.0.x
+
+      - name: restore .NET
+        run: dotnet restore dotnet.sln
+
+      - name: build
+        run: |
+          dotnet build tools/tools.csproj
+          dotnet build dotnet.sln -c Release --no-restore /p:PatchVersion=${{ github.run_number }}
+          
+      - name: pack
+        run: |
+          dotnet pack
+
+      - name: publish to GitHub nuget repository
+        run: |
+          for file in artifacts/package/release/Itmo.Dev*.nupkg
+          do
+            dotnet nuget push "${file#/}" --source "nuget.org" --api-key ${{ secrets.NUGET_API_KEY }}
+          done

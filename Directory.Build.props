@@ -3,6 +3,6 @@
   <PropertyGroup>
 
     <ArtifactsPath>$(MSBuildThisFileDirectory)artifacts</ArtifactsPath>
-
+    <PatchVersion>1</PatchVersion>
   </PropertyGroup>
 </Project>

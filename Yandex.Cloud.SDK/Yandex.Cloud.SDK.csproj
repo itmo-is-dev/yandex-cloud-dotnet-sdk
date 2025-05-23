@@ -4,17 +4,17 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace>Yandex.Cloud</RootNamespace>
 
-        <PackageId>Yandex.Cloud.SDK</PackageId>
-        <Title>Yandex.Cloud SDK</Title>
+        <PackageId>Itmo.Dev.Yandex.Cloud.SDK</PackageId>
+        <Title>Yandex.Cloud SDK (customized by itmo-is-dev)</Title>
         <Summary>Software Development Kit designed to ease interaction with Yandex.Cloud API.</Summary>
         <Description>See project site for more info.</Description>
-        <PackageVersion>1.4.1</PackageVersion>
-        <Authors>Yandex.Cloud</Authors>
+        <PackageVersion>1.4.1.$(PatchVersion)</PackageVersion>
+        <Authors>Yandex.Cloud; itmo-is-dev</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/yandex-cloud/dotnet-sdk/</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/itmo-is-dev/yandex-cloud-dotnet-sdk</PackageProjectUrl>
         <PackageReleaseNotes>Yandex Cloud SDK</PackageReleaseNotes>
-        <Copyright>Copyright 2024, YANDEX LLC.</Copyright>
-        <PackageTags>yandex-cloud sdk proto proto3 protobuf grpc</PackageTags>
+        <Copyright>Copyright 2025, YANDEX LLC.</Copyright>
+        <PackageTags>yandex-cloud sdk proto proto3 protobuf grpc itmo-is-dev</PackageTags>
         <LangVersion>default</LangVersion>
     </PropertyGroup>
 
@@ -29,7 +29,7 @@
     </ItemGroup>
 
     <Target Name="GenerateServices" BeforeTargets="BeforeBuild">
-        <Exec Command="dotnet ../artifacts/bin/tools/$(configuration)/tools.dll ./Generated.cs" />
+        <Exec Command="dotnet $(ArtifactsPath)/bin/tools/$(configuration)/tools.dll ./Generated.cs" />
     </Target>
 
 </Project>

@@ -166,6 +166,14 @@ namespace Yandex.Cloud.Generated
             }
         }
         
+        public virtual Yandex.Cloud.Video.V1.PlaylistService.PlaylistServiceClient PlaylistService
+        {
+            get
+            {
+                return new Yandex.Cloud.Video.V1.PlaylistService.PlaylistServiceClient(this.GetChannel());
+            }
+        }
+        
         public virtual Yandex.Cloud.Video.V1.StreamLineService.StreamLineServiceClient StreamLineService
         {
             get
@@ -182,6 +190,14 @@ namespace Yandex.Cloud.Generated
             }
         }
         
+        public virtual Yandex.Cloud.Video.V1.SubtitleService.SubtitleServiceClient SubtitleService
+        {
+            get
+            {
+                return new Yandex.Cloud.Video.V1.SubtitleService.SubtitleServiceClient(this.GetChannel());
+            }
+        }
+        
         public virtual Yandex.Cloud.Video.V1.ThumbnailService.ThumbnailServiceClient ThumbnailService
         {
             get
@@ -195,6 +211,32 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Yandex.Cloud.Video.V1.VideoService.VideoServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
+    public class Services_Trino : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Trino(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Trino is not supported at this moment");
+        }
+        
+        public virtual Yandex.Cloud.Trino.V1.CatalogService.CatalogServiceClient CatalogService
+        {
+            get
+            {
+                return new Yandex.Cloud.Trino.V1.CatalogService.CatalogServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Trino.V1.ClusterService.ClusterServiceClient ClusterService
+        {
+            get
+            {
+                return new Yandex.Cloud.Trino.V1.ClusterService.ClusterServiceClient(this.GetChannel());
             }
         }
     }
@@ -224,6 +266,14 @@ namespace Yandex.Cloud.Generated
         {
         }
         
+        public virtual Yandex.Cloud.Speechsense.V1.ClassifiersService.ClassifiersServiceClient ClassifiersService
+        {
+            get
+            {
+                return new Yandex.Cloud.Speechsense.V1.ClassifiersService.ClassifiersServiceClient(this.GetChannel());
+            }
+        }
+        
         public virtual Yandex.Cloud.Speechsense.V1.ProjectService.ProjectServiceClient ProjectService
         {
             get
@@ -237,6 +287,32 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Yandex.Cloud.Speechsense.V1.TalkService.TalkServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
+    public class Services_Spark : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Spark(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Spark is not supported at this moment");
+        }
+        
+        public virtual Yandex.Cloud.Spark.V1.ClusterService.ClusterServiceClient ClusterService
+        {
+            get
+            {
+                return new Yandex.Cloud.Spark.V1.ClusterService.ClusterServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Spark.V1.JobService.JobServiceClient JobService
+        {
+            get
+            {
+                return new Yandex.Cloud.Spark.V1.JobService.JobServiceClient(this.GetChannel());
             }
         }
     }
@@ -582,6 +658,48 @@ namespace Yandex.Cloud.Generated
         }
     }
     
+    public class Services_Searchapi : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Searchapi(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Searchapi is not supported at this moment");
+        }
+        
+        public virtual Yandex.Cloud.Searchapi.V2.GenSearchService.GenSearchServiceClient GenSearchService
+        {
+            get
+            {
+                return new Yandex.Cloud.Searchapi.V2.GenSearchService.GenSearchServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Searchapi.V2.ImageSearchService.ImageSearchServiceClient ImageSearchService
+        {
+            get
+            {
+                return new Yandex.Cloud.Searchapi.V2.ImageSearchService.ImageSearchServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Searchapi.V2.WebSearchAsyncService.WebSearchAsyncServiceClient WebSearchAsyncService
+        {
+            get
+            {
+                return new Yandex.Cloud.Searchapi.V2.WebSearchAsyncService.WebSearchAsyncServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Searchapi.V2.WebSearchService.WebSearchServiceClient WebSearchService
+        {
+            get
+            {
+                return new Yandex.Cloud.Searchapi.V2.WebSearchService.WebSearchServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
     public class Services_Resourcemanager : Yandex.Cloud.ServiceRegistry
     {
         
@@ -603,6 +721,24 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Yandex.Cloud.Resourcemanager.V1.FolderService.FolderServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
+    public class Services_Quotamanager : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Quotamanager(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Quotamanager is not supported at this moment");
+        }
+        
+        public virtual Yandex.Cloud.Quotamanager.V1.QuotaLimitService.QuotaLimitServiceClient QuotaLimitService
+        {
+            get
+            {
+                return new Yandex.Cloud.Quotamanager.V1.QuotaLimitService.QuotaLimitServiceClient(this.GetChannel());
             }
         }
     }
@@ -756,6 +892,24 @@ namespace Yandex.Cloud.Generated
         }
     }
     
+    public class Services_Metastore : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Metastore(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Metastore is not supported at this moment");
+        }
+        
+        public virtual Yandex.Cloud.Metastore.V1.ClusterService.ClusterServiceClient ClusterService
+        {
+            get
+            {
+                return new Yandex.Cloud.Metastore.V1.ClusterService.ClusterServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
     public class Services_Mdb_Sqlserver : Yandex.Cloud.ServiceRegistry
     {
         
@@ -805,6 +959,56 @@ namespace Yandex.Cloud.Generated
         }
     }
     
+    public class Services_Mdb_Spqr : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Mdb_Spqr(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Mdb_Spqr is not supported at this moment");
+        }
+        
+        public virtual Yandex.Cloud.Mdb.Spqr.V1.BackupService.BackupServiceClient BackupService
+        {
+            get
+            {
+                return new Yandex.Cloud.Mdb.Spqr.V1.BackupService.BackupServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Mdb.Spqr.V1.ClusterService.ClusterServiceClient ClusterService
+        {
+            get
+            {
+                return new Yandex.Cloud.Mdb.Spqr.V1.ClusterService.ClusterServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Mdb.Spqr.V1.DatabaseService.DatabaseServiceClient DatabaseService
+        {
+            get
+            {
+                return new Yandex.Cloud.Mdb.Spqr.V1.DatabaseService.DatabaseServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Mdb.Spqr.V1.ResourcePresetService.ResourcePresetServiceClient ResourcePresetService
+        {
+            get
+            {
+                return new Yandex.Cloud.Mdb.Spqr.V1.ResourcePresetService.ResourcePresetServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Mdb.Spqr.V1.UserService.UserServiceClient UserService
+        {
+            get
+            {
+                return new Yandex.Cloud.Mdb.Spqr.V1.UserService.UserServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
     public class Services_Mdb_Redis : Yandex.Cloud.ServiceRegistry
     {
         
@@ -836,6 +1040,14 @@ namespace Yandex.Cloud.Generated
                 return new Yandex.Cloud.Mdb.Redis.V1.ResourcePresetService.ResourcePresetServiceClient(this.GetChannel());
             }
         }
+        
+        public virtual Yandex.Cloud.Mdb.Redis.V1.UserService.UserServiceClient UserService
+        {
+            get
+            {
+                return new Yandex.Cloud.Mdb.Redis.V1.UserService.UserServiceClient(this.GetChannel());
+            }
+        }
     }
     
     public class Services_Mdb_Postgresql : Yandex.Cloud.ServiceRegistry
@@ -844,6 +1056,14 @@ namespace Yandex.Cloud.Generated
         public Services_Mdb_Postgresql(Yandex.Cloud.Sdk sdk) : 
                 base(sdk, "managed-postgresql")
         {
+        }
+        
+        public virtual Yandex.Cloud.Mdb.Postgresql.V1.BackupRetentionPolicyService.BackupRetentionPolicyServiceClient BackupRetentionPolicyService
+        {
+            get
+            {
+                return new Yandex.Cloud.Mdb.Postgresql.V1.BackupRetentionPolicyService.BackupRetentionPolicyServiceClient(this.GetChannel());
+            }
         }
         
         public virtual Yandex.Cloud.Mdb.Postgresql.V1.BackupService.BackupServiceClient BackupService
@@ -916,6 +1136,14 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Yandex.Cloud.Mdb.Opensearch.V1.ClusterService.ClusterServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Mdb.Opensearch.V1.ExtensionService.ExtensionServiceClient ExtensionService
+        {
+            get
+            {
+                return new Yandex.Cloud.Mdb.Opensearch.V1.ExtensionService.ExtensionServiceClient(this.GetChannel());
             }
         }
         
@@ -1115,11 +1343,27 @@ namespace Yandex.Cloud.Generated
             }
         }
         
+        public virtual Yandex.Cloud.Mdb.Greenplum.V1.ResourceGroupService.ResourceGroupServiceClient ResourceGroupService
+        {
+            get
+            {
+                return new Yandex.Cloud.Mdb.Greenplum.V1.ResourceGroupService.ResourceGroupServiceClient(this.GetChannel());
+            }
+        }
+        
         public virtual Yandex.Cloud.Mdb.Greenplum.V1.ResourcePresetService.ResourcePresetServiceClient ResourcePresetService
         {
             get
             {
                 return new Yandex.Cloud.Mdb.Greenplum.V1.ResourcePresetService.ResourcePresetServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Mdb.Greenplum.V1.UserService.UserServiceClient UserService
+        {
+            get
+            {
+                return new Yandex.Cloud.Mdb.Greenplum.V1.UserService.UserServiceClient(this.GetChannel());
             }
         }
     }
@@ -1197,6 +1441,14 @@ namespace Yandex.Cloud.Generated
             }
         }
         
+        public virtual Yandex.Cloud.Mdb.Clickhouse.V1.ClusterExtensionService.ClusterExtensionServiceClient ClusterExtensionService
+        {
+            get
+            {
+                return new Yandex.Cloud.Mdb.Clickhouse.V1.ClusterExtensionService.ClusterExtensionServiceClient(this.GetChannel());
+            }
+        }
+        
         public virtual Yandex.Cloud.Mdb.Clickhouse.V1.ClusterService.ClusterServiceClient ClusterService
         {
             get
@@ -1210,6 +1462,14 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Yandex.Cloud.Mdb.Clickhouse.V1.DatabaseService.DatabaseServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Mdb.Clickhouse.V1.ExtensionService.ExtensionServiceClient ExtensionService
+        {
+            get
+            {
+                return new Yandex.Cloud.Mdb.Clickhouse.V1.ExtensionService.ExtensionServiceClient(this.GetChannel());
             }
         }
         
@@ -1267,6 +1527,14 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Services_Mdb_Sqlserver(this.Sdk());
+            }
+        }
+        
+        public virtual Services_Mdb_Spqr Spqr
+        {
+            get
+            {
+                return new Services_Mdb_Spqr(this.Sdk());
             }
         }
         
@@ -1358,6 +1626,50 @@ namespace Yandex.Cloud.Generated
                 return new Yandex.Cloud.Marketplace.Metering.V1.ImageProductUsageService.ImageProductUsageServiceClient(this.GetChannel());
             }
         }
+        
+        public virtual Yandex.Cloud.Marketplace.Metering.V1.ProductUsageService.ProductUsageServiceClient ProductUsageService
+        {
+            get
+            {
+                return new Yandex.Cloud.Marketplace.Metering.V1.ProductUsageService.ProductUsageServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
+    public class Services_Marketplace_Pim_Saas : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Marketplace_Pim_Saas(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Marketplace_Pim_Saas is not supported at this moment");
+        }
+        
+        public virtual Yandex.Cloud.Marketplace.Pim.V1.Saas.ProductInstanceService.ProductInstanceServiceClient ProductInstanceService
+        {
+            get
+            {
+                return new Yandex.Cloud.Marketplace.Pim.V1.Saas.ProductInstanceService.ProductInstanceServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
+    public class Services_Marketplace_Pim : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Marketplace_Pim(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Marketplace_Pim is not supported at this moment");
+        }
+        
+        public virtual Services_Marketplace_Pim_Saas Saas
+        {
+            get
+            {
+                return new Services_Marketplace_Pim_Saas(this.Sdk());
+            }
+        }
     }
     
     public class Services_Marketplace_Licensemanager_Saas : Yandex.Cloud.ServiceRegistry
@@ -1431,6 +1743,14 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Services_Marketplace_Metering(this.Sdk());
+            }
+        }
+        
+        public virtual Services_Marketplace_Pim Pim
+        {
+            get
+            {
+                return new Services_Marketplace_Pim(this.Sdk());
             }
         }
         
@@ -1805,6 +2125,14 @@ namespace Yandex.Cloud.Generated
             }
         }
         
+        public virtual Yandex.Cloud.K8S.V1.ResourcePresetService.ResourcePresetServiceClient ResourcePresetService
+        {
+            get
+            {
+                return new Yandex.Cloud.K8S.V1.ResourcePresetService.ResourcePresetServiceClient(this.GetChannel());
+            }
+        }
+        
         public virtual Yandex.Cloud.K8S.V1.VersionService.VersionServiceClient VersionService
         {
             get
@@ -2065,6 +2393,24 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Services_Iam_Awscompatibility(this.Sdk());
+            }
+        }
+    }
+    
+    public class Services_Gitlab : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Gitlab(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Gitlab is not supported at this moment");
+        }
+        
+        public virtual Yandex.Cloud.Gitlab.V1.InstanceService.InstanceServiceClient InstanceService
+        {
+            get
+            {
+                return new Yandex.Cloud.Gitlab.V1.InstanceService.InstanceServiceClient(this.GetChannel());
             }
         }
     }
@@ -2470,6 +2816,14 @@ namespace Yandex.Cloud.Generated
             }
         }
         
+        public virtual Yandex.Cloud.Compute.V1.ReservedInstancePoolService.ReservedInstancePoolServiceClient ReservedInstancePoolService
+        {
+            get
+            {
+                return new Yandex.Cloud.Compute.V1.ReservedInstancePoolService.ReservedInstancePoolServiceClient(this.GetChannel());
+            }
+        }
+        
         public virtual Yandex.Cloud.Compute.V1.SnapshotScheduleService.SnapshotScheduleServiceClient SnapshotScheduleService
         {
             get
@@ -2516,6 +2870,84 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Yandex.Cloud.Cloudrouter.V1.RoutingInstanceService.RoutingInstanceServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
+    public class Services_Cloudregistry : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Cloudregistry(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Cloudregistry is not supported at this moment");
+        }
+        
+        public virtual Yandex.Cloud.Cloudregistry.V1.ArtifactService.ArtifactServiceClient ArtifactService
+        {
+            get
+            {
+                return new Yandex.Cloud.Cloudregistry.V1.ArtifactService.ArtifactServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Cloudregistry.V1.RegistryService.RegistryServiceClient RegistryService
+        {
+            get
+            {
+                return new Yandex.Cloud.Cloudregistry.V1.RegistryService.RegistryServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
+    public class Services_Clouddesktop_Api : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Clouddesktop_Api(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Clouddesktop_Api is not supported at this moment");
+        }
+        
+        public virtual Yandex.Cloud.Clouddesktop.V1.Api.DesktopGroupService.DesktopGroupServiceClient DesktopGroupService
+        {
+            get
+            {
+                return new Yandex.Cloud.Clouddesktop.V1.Api.DesktopGroupService.DesktopGroupServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Clouddesktop.V1.Api.DesktopImageService.DesktopImageServiceClient DesktopImageService
+        {
+            get
+            {
+                return new Yandex.Cloud.Clouddesktop.V1.Api.DesktopImageService.DesktopImageServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Clouddesktop.V1.Api.DesktopService.DesktopServiceClient DesktopService
+        {
+            get
+            {
+                return new Yandex.Cloud.Clouddesktop.V1.Api.DesktopService.DesktopServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
+    public class Services_Clouddesktop : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Clouddesktop(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Clouddesktop is not supported at this moment");
+        }
+        
+        public virtual Services_Clouddesktop_Api Api
+        {
+            get
+            {
+                return new Services_Clouddesktop_Api(this.Sdk());
             }
         }
     }
@@ -2689,6 +3121,14 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Yandex.Cloud.Cdn.V1.ResourceRulesService.ResourceRulesServiceClient(this.GetChannel());
+            }
+        }
+        
+        public virtual Yandex.Cloud.Cdn.V1.ShieldingService.ShieldingServiceClient ShieldingService
+        {
+            get
+            {
+                return new Yandex.Cloud.Cdn.V1.ShieldingService.ShieldingServiceClient(this.GetChannel());
             }
         }
     }
@@ -2891,6 +3331,24 @@ namespace Yandex.Cloud.Generated
         }
     }
     
+    public class Services_Ai_Tuning : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Ai_Tuning(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Ai_Tuning is not supported at this moment");
+        }
+        
+        public virtual Yandex.Cloud.Ai.Tuning.V1.TuningService.TuningServiceClient TuningService
+        {
+            get
+            {
+                return new Yandex.Cloud.Ai.Tuning.V1.TuningService.TuningServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
     public class Services_Ai_Translate : Yandex.Cloud.ServiceRegistry
     {
         
@@ -3016,6 +3474,14 @@ namespace Yandex.Cloud.Generated
             }
         }
         
+        public virtual Yandex.Cloud.Ai.FoundationModels.V1.TextGenerationBatchService.TextGenerationBatchServiceClient TextGenerationBatchService
+        {
+            get
+            {
+                return new Yandex.Cloud.Ai.FoundationModels.V1.TextGenerationBatchService.TextGenerationBatchServiceClient(this.GetChannel());
+            }
+        }
+        
         public virtual Yandex.Cloud.Ai.FoundationModels.V1.TokenizerService.TokenizerServiceClient TokenizerService
         {
             get
@@ -3071,6 +3537,24 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Yandex.Cloud.Ai.Dataset.V1.DatasetService.DatasetServiceClient(this.GetChannel());
+            }
+        }
+    }
+    
+    public class Services_Ai_BatchInference : Yandex.Cloud.ServiceRegistry
+    {
+        
+        public Services_Ai_BatchInference(Yandex.Cloud.Sdk sdk) : 
+                base(sdk, "unknown")
+        {
+            throw new System.Exception("service Services_Ai_BatchInference is not supported at this moment");
+        }
+        
+        public virtual Yandex.Cloud.Ai.BatchInference.V1.BatchInferenceService.BatchInferenceServiceClient BatchInferenceService
+        {
+            get
+            {
+                return new Yandex.Cloud.Ai.BatchInference.V1.BatchInferenceService.BatchInferenceServiceClient(this.GetChannel());
             }
         }
     }
@@ -3224,6 +3708,14 @@ namespace Yandex.Cloud.Generated
             }
         }
         
+        public virtual Services_Ai_Tuning Tuning
+        {
+            get
+            {
+                return new Services_Ai_Tuning(this.Sdk());
+            }
+        }
+        
         public virtual Services_Ai_Translate Translate
         {
             get
@@ -3272,6 +3764,14 @@ namespace Yandex.Cloud.Generated
             }
         }
         
+        public virtual Services_Ai_BatchInference BatchInference
+        {
+            get
+            {
+                return new Services_Ai_BatchInference(this.Sdk());
+            }
+        }
+        
         public virtual Services_Ai_Assistants Assistants
         {
             get
@@ -3313,6 +3813,14 @@ namespace Yandex.Cloud.Generated
             }
         }
         
+        public virtual Services_Trino Trino
+        {
+            get
+            {
+                return new Services_Trino(this.Sdk());
+            }
+        }
+        
         public virtual Services_Storage Storage
         {
             get
@@ -3326,6 +3834,14 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Services_Speechsense(this.Sdk());
+            }
+        }
+        
+        public virtual Services_Spark Spark
+        {
+            get
+            {
+                return new Services_Spark(this.Sdk());
             }
         }
         
@@ -3353,11 +3869,27 @@ namespace Yandex.Cloud.Generated
             }
         }
         
+        public virtual Services_Searchapi Searchapi
+        {
+            get
+            {
+                return new Services_Searchapi(this.Sdk());
+            }
+        }
+        
         public virtual Services_Resourcemanager Resourcemanager
         {
             get
             {
                 return new Services_Resourcemanager(this.Sdk());
+            }
+        }
+        
+        public virtual Services_Quotamanager Quotamanager
+        {
+            get
+            {
+                return new Services_Quotamanager(this.Sdk());
             }
         }
         
@@ -3382,6 +3914,14 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Services_Monitoring(this.Sdk());
+            }
+        }
+        
+        public virtual Services_Metastore Metastore
+        {
+            get
+            {
+                return new Services_Metastore(this.Sdk());
             }
         }
         
@@ -3465,6 +4005,14 @@ namespace Yandex.Cloud.Generated
             }
         }
         
+        public virtual Services_Gitlab Gitlab
+        {
+            get
+            {
+                return new Services_Gitlab(this.Sdk());
+            }
+        }
+        
         public virtual Services_Endpoint Endpoint
         {
             get
@@ -3526,6 +4074,22 @@ namespace Yandex.Cloud.Generated
             get
             {
                 return new Services_Cloudrouter(this.Sdk());
+            }
+        }
+        
+        public virtual Services_Cloudregistry Cloudregistry
+        {
+            get
+            {
+                return new Services_Cloudregistry(this.Sdk());
+            }
+        }
+        
+        public virtual Services_Clouddesktop Clouddesktop
+        {
+            get
+            {
+                return new Services_Clouddesktop(this.Sdk());
             }
         }
         
