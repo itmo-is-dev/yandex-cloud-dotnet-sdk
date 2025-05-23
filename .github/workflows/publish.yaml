@@ -34,7 +34,7 @@ jobs:
 
       - name: build
         run: |
-          dotnet build -c Release tools/tools.csproj
+          dotnet build -c Release --no-restore tools/tools.csproj
           dotnet build dotnet.sln -c Release --no-restore /p:PatchVersion=${{ github.run_number }}
           
       - name: pack
